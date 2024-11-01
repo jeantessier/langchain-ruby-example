@@ -1,12 +1,20 @@
 require 'langchain'
 require 'openai'
 require 'gemini-ai'
+require 'anthropic'
 require 'dotenv'
 
 def create_open_ai_model
   Langchain::LLM::OpenAI.new(
     api_key: ENV["OPENAI_API_KEY"],
     default_options: { temperature: 0.7, chat_model: "gpt-4o-mini" },
+  )
+end
+
+def create_anthropic_model
+  Langchain::LLM::Anthropic.new(
+    api_key: ENV["ANTHROPIC_API_KEY"],
+    default_options: { temperature: 0.7 },
   )
 end
 
