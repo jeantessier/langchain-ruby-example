@@ -27,7 +27,14 @@ end
 
 Dotenv.load
 
-llm = create_google_model
+pos = ARGV.find_index("--model") || -1
+
+llm = case ARGV[pos + 1]
+      when "openai" then create_open_ai_model
+      when "anthropic" then create_anthropic_model
+      when "google" then create_google_model
+      else create_open_ai_model
+      end
 
 # response = llm.embed(text: "Hello, world!")
 # embedding = response.embedding
