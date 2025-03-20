@@ -25,6 +25,14 @@ def create_google_model
   )
 end
 
+def create_deepseek_model
+  # Langchain::LLM::DeepSeek did not exist, as of 2025-03-03, when GenAI agents suggested it.
+  Langchain::LLM::DeepSeek.new(
+    api_key: ENV["DEEPSEEK_API_KEY"],
+    default_options: { temperature: 0.7, chat_model: ENV["DEEPSEEK_MODEL"] },
+  )
+end
+
 Dotenv.load
 
 pos = ARGV.find_index("--model") || -1
@@ -33,6 +41,7 @@ llm = case ARGV[pos + 1]
       when "openai" then create_open_ai_model
       when "anthropic" then create_anthropic_model
       when "google" then create_google_model
+      when "deepseek" then create_deepseek_model
       else create_open_ai_model
       end
 
