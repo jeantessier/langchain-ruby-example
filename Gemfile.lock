@@ -3,14 +3,14 @@ GEM
   specs:
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    anthropic (0.3.2)
+    anthropic (0.4.0)
       event_stream_parser (>= 0.3.0, < 2.0.0)
       faraday (>= 1)
       faraday-multipart (>= 1)
     baran (0.1.12)
     base64 (0.2.0)
     csv (3.3.3)
-    diff-lcs (1.6.0)
+    diff-lcs (1.6.1)
     dotenv (3.1.7)
     event_stream_parser (1.0.0)
     faraday (2.12.2)
@@ -45,7 +45,7 @@ GEM
       matrix
       pragmatic_segmenter (~> 0.3.0)
       zeitwerk (~> 2.5)
-    logger (1.6.6)
+    logger (1.7.0)
     matrix (0.4.2)
     multi_json (1.15.0)
     multipart-post (2.4.1)
@@ -71,7 +71,7 @@ GEM
       event_stream_parser (>= 0.3.0, < 2.0.0)
       faraday (>= 1)
       googleauth (~> 1.8)
-    ruby-openai (8.0.0)
+    ruby-openai (8.1.0)
       event_stream_parser (>= 0.3.0, < 2.0.0)
       faraday (>= 1)
       faraday-multipart (>= 1)
@@ -96,4 +96,4 @@ DEPENDENCIES
   ruby-openai
 
 BUNDLED WITH
-   2.6.6
+   2.6.7
