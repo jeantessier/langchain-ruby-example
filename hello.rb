@@ -45,23 +45,24 @@ llm = case ARGV[pos + 1]
       else create_open_ai_model
       end
 
-# response = llm.embed(text: "Hello, world!")
-# embedding = response.embedding
-#
-# puts embedding
+prompt = Langchain::Prompt::PromptTemplate.new(template: "Tell me a {adjective} joke about {content}.", input_variables: ["adjective", "content"])
+prompt_text = prompt.format(adjective: "funny", content: "chickens") # "Tell me a funny joke about chickens."
 
-messages = {
-  parts: [
-    { text: "Translate this user message to Spanish." },
-    { text: "Hello, World!" },
-  ]
-}
+messages = [
+  { role: "user", content: prompt_text },
+]
 
 response = llm.chat(messages: messages)
 
 puts "Response"
 puts "--------"
 puts response
+
+puts
+
+puts "Completion"
+puts "----------"
+puts response.completion
 
 puts
 
