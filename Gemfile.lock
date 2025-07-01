@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    anthropic (1.1.0)
+    anthropic (1.1.1)
       connection_pool
     baran (0.1.12)
     base64 (0.3.0)
@@ -37,7 +37,7 @@ GEM
     json-schema (5.1.1)
       addressable (~> 2.8)
       bigdecimal (~> 3.1)
-    jwt (2.10.1)
+    jwt (2.10.2)
       base64
     langchainrb (0.19.5)
       baran (~> 0.1.9)
@@ -59,7 +59,7 @@ GEM
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
-    rspec-core (3.13.4)
+    rspec-core (3.13.5)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
