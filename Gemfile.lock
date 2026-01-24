@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.8.8)
       public_suffix (>= 2.0.2, < 8.0)
-    anthropic (1.16.2)
+    anthropic (1.16.3)
       connection_pool
     baran (0.1.12)
     base64 (0.3.0)
@@ -25,7 +25,7 @@ GEM
       base64 (~> 0.2)
       faraday (>= 1.0, < 3.a)
     google-logging-utils (0.2.0)
-    googleauth (1.16.0)
+    googleauth (1.16.1)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.2)
       google-logging-utils (~> 0.1)
@@ -54,7 +54,7 @@ GEM
       uri (>= 0.11.1)
     os (1.1.4)
     pragmatic_segmenter (0.3.24)
-    public_suffix (7.0.0)
+    public_suffix (7.0.2)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -97,4 +97,4 @@ DEPENDENCIES
   ruby-openai
 
 BUNDLED WITH
-  4.0.3
+  4.0.4
